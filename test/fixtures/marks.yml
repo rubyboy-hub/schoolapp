@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  stud_id: 
+  sub_id: 
+  mark: 
+  term: one
+
+two:
+  stud_id: 
+  sub_id: 
+  mark: 
+  term: two
