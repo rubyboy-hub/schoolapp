@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class AddClassteacherToUsers < ActiveRecord::Migration[6.1]
   def change
     add_column :users, :class_teach_id, :bigint, null: true, index: true

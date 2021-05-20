@@ -1,0 +1,18 @@
+# <% if notice.present? %>
+# <div class="alert alert-success" role="alert">
+#     <%= notice %>
+# </div>
+#     <p class="notice">
+# <% elsif alert.present? %>
+#     <div class="alert alert-danger" role="alert">
+#         <%= alert %>
+#     </div> 
+# <% end %>
+<% unless flash.empty? %>
+   <script type="text/javascript">
+      <% flash.each do |f| %>
+    <% type = f[0].to_s.gsub('alert', 'error').gsub('notice', 'info') %>
+   	 toastr['<%= type %>']('<%= f[1] %>');
+   <% end %>
+   </script>
+<% end %>
