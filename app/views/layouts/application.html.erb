@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="h-100" lang="en">
   <head>
     <title>Schoolapp</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -7,10 +7,20 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application','data-turbolinks-eval': 'false','data-turbolinks-track': 'reload' %>
+    <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" data-mutate-approach="sync"></script>
   </head>
+ 
+  <body class="d-flex flex-column h-100">
+  <header>
+      <%= render 'include/header' %>
+      <%= render 'include/alert' %>
 
-  <body>
+   </header>
+   <p></p>
     <%= yield %>
+    <%= render 'include/footer' %>
+
   </body>
 </html>
